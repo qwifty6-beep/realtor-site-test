@@ -3,160 +3,273 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arjun Real Estate | Buy & Sell Property</title>
-
+  <title>Arjun Real Estate</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9fafb;
+      margin: 0;
+      background: #f9fafb;
       color: #1f2937;
     }
 
     header {
-      background-color: #2563eb;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: #ffffff;
+      padding: 15px 20px;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
-    nav {
-      margin-top: 10px;
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav a {
-      color: white;
-      margin: 0 15px;
+    header a {
       text-decoration: none;
+      color: #2563eb;
       font-weight: bold;
+      margin-left: 15px;
     }
 
-    .container {
-      max-width: 1100px;
+    section {
+      padding: 30px 20px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px 20px;
     }
 
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Hero Section */
     .hero {
       text-align: center;
       padding: 60px 20px;
-      background-color: #e0e7ff;
-      border-radius: 8px;
+      background: #2563eb;
+      color: #fff;
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 18px;
-      margin-bottom: 25px;
-      color: #374151;
+      margin-bottom: 20px;
     }
 
-    .btn {
+    .cta {
       display: inline-block;
-      padding: 12px 24px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
+      background: #25d366;
+      color: #fff;
+      padding: 12px 20px;
       border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    .btn.secondary {
-      background-color: #16a34a;
-      margin-left: 10px;
-    }
-
-    .section {
-      margin-top: 60px;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* About Section */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      align-items: center;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
+    .about-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .about-container p {
+      flex: 1;
+      min-width: 200px;
+      line-height: 1.6;
+    }
+
+    .about-container ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .about-container li {
+      margin-bottom: 6px;
+    }
+
+    /* Properties Section */
+    .area-section {
+      margin-bottom: 40px;
+    }
+
+    .area-title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #2563eb;
+      display: inline-block;
+    }
+
+    .property-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 15px;
+      margin-bottom: 20px;
     }
 
-    footer {
-      background-color: #111827;
-      color: #9ca3af;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-      font-size: 14px;
+    .property-media {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .property-info h3 {
+      margin: 5px 0;
+    }
+
+    .property-info p {
+      margin: 4px 0;
+      color: #4b5563;
+    }
+
+    .status.available {
+      color: green;
+      font-weight: bold;
+    }
+
+    .status.sold {
+      color: red;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-container p {
+        min-width: auto;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h2>Arjun Real Estate</h2>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/properties.html">Properties</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <div class="container">
-    <div class="hero">
-      <h1>Buy, Sell & Rent Properties with Confidence</h1>
-      <p>
-        Trusted local real estate services for apartments, houses, and commercial spaces.
-      </p>
-      <a href="/properties.html" class="btn">View Properties</a>
-      <a href="https://wa.me/911234567890" class="btn secondary">WhatsApp Us</a>
+<header>
+  <nav>
+    <strong>Arjun Real Estate</strong>
+    <div>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#properties">Properties</a>
+      <a href="contact.html">Contact</a>
     </div>
+  </nav>
+</header>
 
-    <!-- WHY US -->
-    <div class="section">
-      <h2>Why Choose Us</h2>
-      <div class="features">
-        <div class="card">
-          <h3>Verified Listings</h3>
-          <p>All properties are personally verified to ensure transparency and trust.</p>
-        </div>
-        <div class="card">
-          <h3>Local Expertise</h3>
-          <p>Deep knowledge of local areas, pricing trends, and legal processes.</p>
-        </div>
-        <div class="card">
-          <h3>Direct Owner Deals</h3>
-          <p>No unnecessary middlemen. Faster, smoother transactions.</p>
-        </div>
-      </div>
-    </div>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <h1>Arjun Real Estate</h1>
+  <p>Your trusted broker for properties in Mumbai</p>
+  <a href="https://wa.me/911234567890" class="cta" target="_blank">Call / WhatsApp</a>
+</section>
 
-    <!-- CTA -->
-    <div class="section" style="text-align:center;">
-      <h2>Looking to Buy or Sell a Property?</h2>
-      <p>Contact us today for a free consultation.</p>
-      <a href="https://wa.me/911234567890" class="btn">Contact on WhatsApp</a>
+<!-- About Section -->
+<section id="about">
+  <h2>About Arjun</h2>
+  <div class="about-container">
+    <img src="assets/images/broker.png" alt="Arjun Real Estate Broker">
+    <div>
+      <p>Hello! I’m Arjun, founder of Arjun Real Estate. With over 10 years of experience in property consulting across Mumbai, I help clients find their dream homes or investment properties easily and reliably.</p>
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li>Trusted broker with verified listings</li>
+        <li>Quick response via WhatsApp & Call</li>
+        <li>Transparent pricing and no hidden charges</li>
+      </ul>
+      <a href="https://wa.me/911234567890" class="cta" target="_blank">Contact via WhatsApp</a>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Arjun Real Estate. All rights reserved.
-  </footer>
+<!-- Properties Section -->
+<section id="properties">
+  <h2>Available Properties</h2>
+  <div id="properties-container"></div>
+</section>
+
+<script>
+  fetch("data/properties.json")
+    .then(response => response.json())
+    .then(properties => {
+      const container = document.getElementById("properties-container");
+      if (properties.length === 0) {
+        container.innerHTML = "<p>No properties available at the moment.</p>";
+        return;
+      }
+
+      const groupedByArea = {};
+      properties.forEach(property => {
+        if (!groupedByArea[property.area]) groupedByArea[property.area] = [];
+        groupedByArea[property.area].push(property);
+      });
+
+      for (const area in groupedByArea) {
+        const section = document.createElement("div");
+        section.className = "area-section";
+
+        const title = document.createElement("h3");
+        title.className = "area-title";
+        title.textContent = area;
+        section.appendChild(title);
+
+        groupedByArea[area].forEach(p => {
+          const card = document.createElement("div");
+          card.className = "property-card";
+
+          if (p.mediaType === "image") {
+            const img = document.createElement("img");
+            img.src = p.mediaUrl;
+            img.className = "property-media";
+            card.appendChild(img);
+          }
+
+          if (p.mediaType === "video") {
+            const video = document.createElement("video");
+            video.src = p.mediaUrl;
+            video.controls = true;
+            video.className = "property-media";
+            card.appendChild(video);
+          }
+
+          const info = document.createElement("div");
+          info.className = "property-info";
+          info.innerHTML = `
+            <h3>${p.type}</h3>
+            <p>Price: ${p.price}</p>
+            <p class="status ${p.status.toLowerCase()}">${p.status}</p>
+            <a class="cta" href="https://wa.me/911234567890" target="_blank">Enquire on WhatsApp</a>
+          `;
+
+          card.appendChild(info);
+          section.appendChild(card);
+        });
+
+        container.appendChild(section);
+      }
+    })
+    .catch(() => {
+      document.getElementById("properties-container").innerHTML = "<p>Failed to load properties.</p>";
+    });
+</script>
 
 </body>
 </html>
