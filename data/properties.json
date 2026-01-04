@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "type": "2 BHK Apartment",
+    "area": "Andheri",
+    "price": "₹85 Lakhs",
+    "status": "Available",
+    "mediaType": "image",
+    "mediaUrl": "assets/images/andheri-2bhk.jpg"
+  }
+]
