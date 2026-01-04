@@ -1,140 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arjun Realtors</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Real Estate | Buy & Sell Property</title>
+
   <style>
-    /* General Styles */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
     }
 
-    a {
-      text-decoration: none;
-    }
-
-    /* Header / Hero */
     header {
       background-color: #2563eb;
       color: white;
-      padding: 50px 20px;
+      padding: 20px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    nav {
+      margin-top: 10px;
     }
 
-    header p {
-      margin: 10px 0 20px;
-      font-size: 1.1rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background-color: #1e40af;
+    nav a {
       color: white;
+      margin: 0 15px;
+      text-decoration: none;
       font-weight: bold;
-      border-radius: 5px;
     }
 
-    /* Sections */
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
+    .container {
+      max-width: 1100px;
       margin: auto;
+      padding: 40px 20px;
     }
 
-    h2 {
-      color: #2563eb;
-      margin-bottom: 15px;
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #e0e7ff;
+      border-radius: 8px;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    ul li {
-      margin-bottom: 8px;
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #374151;
     }
 
-    /* Footer */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background-color: #16a34a;
+      margin-left: 10px;
+    }
+
+    .section {
+      margin-top: 60px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
     footer {
+      background-color: #111827;
+      color: #9ca3af;
       text-align: center;
       padding: 20px;
-      background-color: #eee;
-      margin-top: 40px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
+      margin-top: 60px;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Hero Section -->
+  <!-- HEADER -->
   <header>
-    <h1>Arjun Realtors</h1>
-    <p>Your trusted partner for buying and selling properties in Panvel, Andheri, and Navi Mumbai</p>
-    <a href="tel:+911234567890" class="cta-button">Call Now</a>
-    <a href="https://wa.me/911234567890" class="cta-button">WhatsApp</a>
+    <h2>Arjun Real Estate</h2>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/properties.html">Properties</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
   </header>
 
-  <!-- Areas Served -->
-  <section>
-    <h2>Areas We Serve</h2>
-    <ul>
-      <li>Panvel</li>
-      <li>Andheri</li>
-      <li>Navi Mumbai</li>
-    </ul>
-  </section>
+  <!-- HERO SECTION -->
+  <div class="container">
+    <div class="hero">
+      <h1>Buy, Sell & Rent Properties with Confidence</h1>
+      <p>
+        Trusted local real estate services for apartments, houses, and commercial spaces.
+      </p>
+      <a href="/properties.html" class="btn">View Properties</a>
+      <a href="https://wa.me/911234567890" class="btn secondary">WhatsApp Us</a>
+    </div>
 
-  <!-- About the Broker -->
-  <section>
-    <h2>About Arjun Realtors</h2>
-    <p>Arjun Realtors has been helping clients find their dream homes with honesty and dedication. We make property buying and selling simple, fast, and transparent.</p>
-  </section>
+    <!-- WHY US -->
+    <div class="section">
+      <h2>Why Choose Us</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Verified Listings</h3>
+          <p>All properties are personally verified to ensure transparency and trust.</p>
+        </div>
+        <div class="card">
+          <h3>Local Expertise</h3>
+          <p>Deep knowledge of local areas, pricing trends, and legal processes.</p>
+        </div>
+        <div class="card">
+          <h3>Direct Owner Deals</h3>
+          <p>No unnecessary middlemen. Faster, smoother transactions.</p>
+        </div>
+      </div>
+    </div>
 
-  <!-- Why Choose Us -->
-  <section>
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>Trusted local experts</li>
-      <li>Fast response via Call/WhatsApp</li>
-      <li>Accurate property listings</li>
-      <li>Personalized guidance for buyers and sellers</li>
-    </ul>
-  </section>
+    <!-- CTA -->
+    <div class="section" style="text-align:center;">
+      <h2>Looking to Buy or Sell a Property?</h2>
+      <p>Contact us today for a free consultation.</p>
+      <a href="https://wa.me/911234567890" class="btn">Contact on WhatsApp</a>
+    </div>
+  </div>
 
-  <!-- CTA at Bottom -->
-  <section style="text-align:center;">
-    <a href="tel:+911234567890" class="cta-button">Call Now</a>
-    <a href="https://wa.me/911234567890" class="cta-button">WhatsApp</a>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    &copy; 2026 Arjun Realtors
+    © 2026 Arjun Real Estate. All rights reserved.
   </footer>
 
 </body>
