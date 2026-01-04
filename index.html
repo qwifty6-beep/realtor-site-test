@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arjun Estates | Luxury Real Estate in Mumbai</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
     * {
       margin: 0;
@@ -14,752 +14,543 @@
     }
 
     :root {
-      --primary: #1a1a1a;
-      --accent: #c9a050;
-      --light: #f5f5f5;
+      --primary: #2c2c2c;
+      --accent: #8b7355;
+      --light-bg: #fafafa;
       --white: #ffffff;
+      --text-light: #666666;
+      --border: #e8e8e8;
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background: var(--white);
       color: var(--primary);
       overflow-x: hidden;
+      line-height: 1.6;
     }
 
-    /* Elegant Header */
+    /* Refined Header */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
       z-index: 1000;
-      padding: 25px 8%;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 28px 6%;
+      transition: all 0.3s ease;
+      border-bottom: 1px solid var(--border);
     }
 
     header.scrolled {
-      padding: 18px 8%;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+      padding: 20px 6%;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1600px;
+      max-width: 1500px;
       margin: 0 auto;
     }
 
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 900;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 700;
       color: var(--primary);
-      letter-spacing: -1px;
-      position: relative;
-    }
-
-    .logo::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 40px;
-      height: 3px;
-      background: var(--accent);
+      letter-spacing: 2px;
     }
 
     .nav-links {
       display: flex;
-      gap: 50px;
+      gap: 45px;
       align-items: center;
     }
 
     .nav-links a {
       color: var(--primary);
       text-decoration: none;
-      font-weight: 500;
-      font-size: 15px;
-      letter-spacing: 0.3px;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .nav-links a::before {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::before {
-      width: 100%;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
       color: var(--accent);
     }
 
-    /* Hero Section - Full Screen Impact */
+    /* Sophisticated Hero */
     .hero {
-      min-height: 100vh;
+      min-height: 92vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      padding: 120px 8% 80px;
+      background: var(--light-bg);
+      padding: 140px 6% 80px;
       position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 80%;
-      height: 150%;
-      background: radial-gradient(circle, rgba(201, 160, 80, 0.08) 0%, transparent 70%);
-      animation: heroFloat 25s ease-in-out infinite;
-    }
-
-    @keyframes heroFloat {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      50% { transform: translate(-30px, 30px) scale(1.05); }
     }
 
     .hero-container {
-      max-width: 1600px;
+      max-width: 1500px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 100px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: center;
-      position: relative;
-      z-index: 2;
     }
 
     .hero-content {
-      animation: fadeInUp 1s ease;
+      max-width: 580px;
     }
 
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero-subtitle {
-      font-size: 14px;
+    .hero-label {
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-weight: 500;
+      margin-bottom: 25px;
     }
 
     .hero-content h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(52px, 6vw, 84px);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 5.5vw, 68px);
+      font-weight: 600;
+      line-height: 1.15;
+      margin-bottom: 28px;
       color: var(--primary);
     }
 
-    .hero-content h1 .accent-text {
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero-description {
-      font-size: 20px;
+    .hero-content p {
+      font-size: 16px;
       line-height: 1.8;
-      color: #666;
-      margin-bottom: 50px;
-      max-width: 600px;
+      color: var(--text-light);
+      margin-bottom: 45px;
+      font-weight: 300;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 18px;
     }
 
     .btn {
-      padding: 18px 45px;
-      font-size: 15px;
-      font-weight: 600;
+      padding: 16px 38px;
+      font-size: 13px;
+      font-weight: 500;
       text-decoration: none;
-      border-radius: 0;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       display: inline-block;
-      letter-spacing: 0.5px;
-      position: relative;
-      overflow: hidden;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: 1px solid var(--primary);
     }
 
-    .btn-primary {
+    .btn-dark {
       background: var(--primary);
       color: var(--white);
-      border: 2px solid var(--primary);
     }
 
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
+    .btn-dark:hover {
       background: var(--accent);
-      transition: left 0.5s ease;
-      z-index: -1;
-    }
-
-    .btn-primary:hover::before {
-      left: 0;
-    }
-
-    .btn-primary:hover {
       border-color: var(--accent);
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     }
 
-    .btn-secondary {
+    .btn-light {
       background: transparent;
       color: var(--primary);
-      border: 2px solid var(--primary);
     }
 
-    .btn-secondary:hover {
+    .btn-light:hover {
       background: var(--primary);
       color: var(--white);
-      transform: translateY(-3px);
-    }
-
-    /* Hero Image - Modern Card */
-    .hero-image-wrapper {
-      position: relative;
-      animation: fadeInUp 1s ease 0.2s backwards;
     }
 
     .hero-image {
-      width: 100%;
-      height: 650px;
-      background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%), 
-                  url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80') center/cover;
       position: relative;
+      height: 580px;
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
     }
 
-    .image-overlay {
+    .hero-main-img {
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=85') center/cover;
+      transition: transform 0.5s ease;
+    }
+
+    .hero-image:hover .hero-main-img {
+      transform: scale(1.03);
+    }
+
+    .hero-overlay-badge {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 40px;
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-      color: white;
-    }
-
-    .image-overlay h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .image-overlay p {
-      font-size: 16px;
-      opacity: 0.8;
-    }
-
-    .floating-stat {
-      position: absolute;
+      bottom: 35px;
+      left: 35px;
       background: var(--white);
-      padding: 25px 35px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
-      animation: float 4s ease-in-out infinite;
+      padding: 22px 28px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-
-    .stat-1 {
-      top: 80px;
-      left: -40px;
-      animation-delay: 0s;
-    }
-
-    .stat-2 {
-      bottom: 100px;
-      right: -40px;
-      animation-delay: 2s;
-    }
-
-    .floating-stat .number {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 900;
+    .hero-overlay-badge .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 700;
       color: var(--accent);
       display: block;
       line-height: 1;
-      margin-bottom: 5px;
     }
 
-    .floating-stat .label {
-      font-size: 13px;
-      color: #666;
+    .hero-overlay-badge .stat-text {
+      font-size: 11px;
+      color: var(--text-light);
       text-transform: uppercase;
       letter-spacing: 1px;
+      margin-top: 6px;
     }
 
-    /* Stats Bar */
-    .stats-bar {
-      background: var(--primary);
-      color: var(--white);
-      padding: 60px 8%;
+    /* Minimal Stats */
+    .stats-section {
+      padding: 70px 6%;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
     .stats-grid {
-      max-width: 1600px;
+      max-width: 1500px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 60px;
+      gap: 50px;
     }
 
-    .stat-item {
+    .stat-box {
       text-align: center;
-      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
     }
 
-    .stat-item:last-child {
-      border-right: none;
-    }
-
-    .stat-item .icon {
-      font-size: 50px;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .stat-item .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      font-weight: 900;
+    .stat-box .number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 700;
       color: var(--accent);
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .stat-item .stat-label {
-      font-size: 14px;
+    .stat-box .label {
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      opacity: 0.7;
+      color: var(--text-light);
+      font-weight: 400;
     }
 
-    /* About Section */
+    /* Clean About Section */
     .about-section {
-      padding: 140px 8%;
-      background: var(--white);
+      padding: 120px 6%;
+      background: var(--light-bg);
     }
 
-    .about-container {
-      max-width: 1600px;
+    .about-grid {
+      max-width: 1500px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 100px;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 90px;
       align-items: center;
     }
 
-    .about-image {
+    .about-image-container {
       position: relative;
-      height: 600px;
-      background: linear-gradient(135deg, rgba(201,160,80,0.3) 0%, rgba(166,131,67,0.3) 100%),
-                  url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80') center/cover;
-      overflow: hidden;
     }
 
-    .experience-badge {
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
-      background: var(--white);
-      padding: 30px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    .about-main-image {
+      width: 100%;
+      height: 550px;
+      background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=85') center/cover;
     }
 
-    .experience-badge .years {
-      font-family: 'Playfair Display', serif;
-      font-size: 56px;
-      font-weight: 900;
-      color: var(--accent);
-      line-height: 1;
-    }
-
-    .experience-badge .text {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #666;
-    }
-
-    .about-content .section-label {
-      font-size: 14px;
+    .about-content .section-intro {
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 20px;
+      font-weight: 500;
+      margin-bottom: 25px;
     }
 
     .about-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 4vw, 56px);
-      font-weight: 900;
-      line-height: 1.2;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(38px, 4vw, 52px);
+      font-weight: 600;
+      line-height: 1.25;
       margin-bottom: 30px;
     }
 
     .about-content p {
-      font-size: 18px;
-      line-height: 1.9;
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    .about-features {
-      margin-top: 50px;
-      display: grid;
-      gap: 25px;
-    }
-
-    .feature-item {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .feature-icon {
-      width: 50px;
-      height: 50px;
-      background: var(--accent);
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-
-    .feature-text h4 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .feature-text p {
       font-size: 15px;
-      color: #666;
-      margin: 0;
+      line-height: 1.9;
+      color: var(--text-light);
+      margin-bottom: 22px;
+      font-weight: 300;
     }
 
-    /* Properties Section */
+    .about-signature {
+      margin-top: 45px;
+      padding-top: 35px;
+      border-top: 1px solid var(--border);
+    }
+
+    .about-signature .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .about-signature .title {
+      font-size: 12px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* Refined Properties */
     .properties-section {
-      padding: 140px 8%;
-      background: var(--light);
+      padding: 120px 6%;
+      background: var(--white);
     }
 
-    .section-header {
-      max-width: 1600px;
-      margin: 0 auto 80px;
+    .section-intro-center {
       text-align: center;
+      max-width: 700px;
+      margin: 0 auto 90px;
     }
 
-    .section-header .section-label {
-      font-size: 14px;
+    .section-intro-center .label {
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .section-intro-center h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(38px, 4vw, 52px);
       font-weight: 600;
+      line-height: 1.25;
       margin-bottom: 20px;
     }
 
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(40px, 4vw, 56px);
-      font-weight: 900;
-      margin-bottom: 20px;
+    .section-intro-center p {
+      font-size: 15px;
+      color: var(--text-light);
+      font-weight: 300;
     }
 
-    .section-header p {
-      font-size: 18px;
-      color: #666;
-    }
-
-    .properties-grid {
-      max-width: 1600px;
+    .properties-container {
+      max-width: 1500px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
+      gap: 35px;
     }
 
-    .property-card {
+    .property-item {
       background: var(--white);
-      overflow: hidden;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      cursor: pointer;
+      transition: all 0.4s ease;
+      border: 1px solid var(--border);
     }
 
-    .property-card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+    .property-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border-color: var(--accent);
     }
 
-    .property-image {
+    .property-img {
       width: 100%;
-      height: 350px;
-      position: relative;
+      height: 320px;
       overflow: hidden;
-      background-size: cover;
-      background-position: center;
-      transition: all 0.5s ease;
+      position: relative;
     }
 
-    .property-card:hover .property-image {
+    .property-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .property-item:hover .property-img img {
       transform: scale(1.05);
     }
 
-    .property-image.property-1 {
-      background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%),
-                  url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80') center/cover;
-    }
-
-    .property-image.property-2 {
-      background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%),
-                  url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80') center/cover;
-    }
-
-    .property-image.property-3 {
-      background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%),
-                  url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80') center/cover;
-    }
-
-    .property-badge {
+    .property-tag {
       position: absolute;
-      top: 25px;
-      left: 25px;
-      background: var(--accent);
-      color: var(--white);
-      padding: 8px 20px;
-      font-size: 12px;
-      font-weight: 600;
+      top: 20px;
+      left: 20px;
+      background: var(--white);
+      color: var(--accent);
+      padding: 6px 16px;
+      font-size: 10px;
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
 
-    .property-content {
-      padding: 40px;
+    .property-details {
+      padding: 35px 30px;
     }
 
     .property-location {
-      font-size: 13px;
-      color: #999;
+      font-size: 11px;
+      color: var(--text-light);
       text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
     }
 
-    .property-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 20px;
+    .property-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 18px;
       color: var(--primary);
     }
 
     .property-price {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 900;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 700;
       color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .property-specs {
+      display: flex;
+      gap: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
       margin-bottom: 25px;
     }
 
-    .property-features {
-      display: flex;
-      gap: 30px;
-      padding-top: 25px;
-      border-top: 1px solid #e0e0e0;
-      margin-bottom: 25px;
+    .spec {
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 400;
     }
 
-    .property-feature {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .property-cta {
+    .property-link {
       display: block;
       text-align: center;
-      padding: 16px;
-      background: transparent;
+      padding: 13px;
+      border: 1px solid var(--primary);
       color: var(--primary);
       text-decoration: none;
-      border: 2px solid var(--primary);
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
       text-transform: uppercase;
       transition: all 0.3s ease;
     }
 
-    .property-cta:hover {
+    .property-link:hover {
       background: var(--primary);
       color: var(--white);
     }
 
-    /* CTA Section */
+    /* Elegant CTA */
     .cta-section {
-      padding: 120px 8%;
+      padding: 100px 6%;
       background: var(--primary);
       color: var(--white);
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -10%;
-      width: 120%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(201, 160, 80, 0.1) 0%, transparent 70%);
-      animation: ctaFloat 20s ease-in-out infinite;
-    }
-
-    @keyframes ctaFloat {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(180deg); }
     }
 
     .cta-content {
-      max-width: 900px;
+      max-width: 750px;
       margin: 0 auto;
-      position: relative;
-      z-index: 2;
     }
 
     .cta-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 4vw, 52px);
-      font-weight: 900;
-      margin-bottom: 25px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 48px);
+      font-weight: 600;
+      margin-bottom: 22px;
     }
 
     .cta-content p {
-      font-size: 20px;
-      opacity: 0.8;
-      margin-bottom: 50px;
+      font-size: 15px;
+      font-weight: 300;
+      opacity: 0.85;
+      margin-bottom: 45px;
     }
 
     .btn-white {
       background: var(--white);
       color: var(--primary);
-      padding: 20px 50px;
-      font-size: 15px;
-      font-weight: 700;
+      padding: 16px 42px;
+      font-size: 13px;
+      font-weight: 500;
       text-decoration: none;
       display: inline-block;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
     }
 
     .btn-white:hover {
       background: var(--accent);
       color: var(--white);
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
     }
 
-    /* WhatsApp Float */
-    .whatsapp-float {
+    /* WhatsApp Button */
+    .whatsapp-btn {
       position: fixed;
-      bottom: 40px;
-      right: 40px;
-      width: 70px;
-      height: 70px;
+      bottom: 35px;
+      right: 35px;
+      width: 62px;
+      height: 62px;
       background: #25D366;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.35);
       z-index: 999;
       transition: all 0.3s ease;
-      animation: pulse 2s ease-in-out infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
-      }
-      50% {
-        box-shadow: 0 10px 50px rgba(37, 211, 102, 0.6);
-        transform: scale(1.05);
-      }
+    .whatsapp-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 35px rgba(37, 211, 102, 0.45);
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      animation: none;
-    }
-
-    .whatsapp-float svg {
-      width: 38px;
-      height: 38px;
+    .whatsapp-btn svg {
+      width: 32px;
+      height: 32px;
       fill: white;
     }
 
     /* Footer */
     footer {
-      background: #0a0a0a;
-      color: rgba(255, 255, 255, 0.6);
-      padding: 60px 8%;
+      background: #1a1a1a;
+      color: rgba(255, 255, 255, 0.5);
+      padding: 50px 6%;
       text-align: center;
     }
 
     footer p {
-      font-size: 14px;
-      letter-spacing: 0.5px;
+      font-size: 12px;
+      letter-spacing: 1px;
     }
 
     /* Mobile Menu */
@@ -767,41 +558,26 @@
       display: none;
       background: none;
       border: none;
-      font-size: 28px;
+      font-size: 24px;
       color: var(--primary);
       cursor: pointer;
     }
 
     /* Responsive */
-    @media (max-width: 1200px) {
-      .hero-container {
+    @media (max-width: 1024px) {
+      .hero-container,
+      .about-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 50px;
       }
 
-      .about-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
-
-      .properties-grid {
+      .properties-container {
         grid-template-columns: repeat(2, 1fr);
       }
 
       .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
-      }
-
-      .stat-item {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 40px;
-      }
-
-      .stat-item:nth-child(3), .stat-item:nth-child(4) {
-        border-bottom: none;
-        padding-bottom: 0;
       }
     }
 
@@ -814,15 +590,14 @@
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 75%;
         height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
+        background: var(--white);
         flex-direction: column;
         justify-content: center;
-        gap: 40px;
-        transition: right 0.4s ease;
-        box-shadow: -10px 0 50px rgba(0, 0, 0, 0.1);
+        gap: 35px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
       }
 
       .nav-links.active {
@@ -833,52 +608,38 @@
         display: block;
       }
 
-      .hero, .about-section, .properties-section {
+      .hero,
+      .about-section,
+      .properties-section {
         padding: 100px 5% 60px;
       }
 
-      .stats-bar {
-        padding: 50px 5%;
-      }
-
-      .properties-grid {
+      .properties-container {
         grid-template-columns: 1fr;
       }
 
       .stats-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
       }
 
-      .stat-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 30px;
-      }
-
-      .stat-item:last-child {
-        border-bottom: none;
-      }
-
-      .whatsapp-float {
-        width: 60px;
-        height: 60px;
+      .whatsapp-btn {
+        width: 56px;
+        height: 56px;
         bottom: 25px;
         right: 25px;
       }
 
-      .whatsapp-float svg {
-        width: 32px;
-        height: 32px;
-      }
-
-      .floating-stat {
-        display: none;
+      .whatsapp-btn svg {
+        width: 28px;
+        height: 28px;
       }
 
       .hero-image {
-        height: 450px;
+        height: 420px;
       }
 
-      .about-image {
+      .about-main-image {
         height: 400px;
       }
     }
@@ -899,181 +660,148 @@
   </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero">
   <div class="hero-container">
     <div class="hero-content">
-      <div class="hero-subtitle">Mumbai's Premier Real Estate</div>
-      <h1>Discover Your <span class="accent-text">Perfect</span> Home</h1>
-      <p class="hero-description">Where luxury meets lifestyle. Experience unparalleled elegance in Mumbai's most sought-after locations with our curated collection of premium properties.</p>
+      <div class="hero-label">Mumbai's Finest</div>
+      <h1>Redefining Luxury Living in India's Financial Capital</h1>
+      <p>Curated portfolio of exceptional properties in Mumbai's most prestigious addresses. Where architectural excellence meets refined living.</p>
       <div class="hero-buttons">
-        <a href="properties.html" class="btn btn-primary">Explore Properties</a>
-        <a href="contact.html" class="btn btn-secondary">Schedule Visit</a>
+        <a href="properties.html" class="btn btn-dark">View Collection</a>
+        <a href="contact.html" class="btn btn-light">Arrange Viewing</a>
       </div>
     </div>
-    <div class="hero-image-wrapper">
-      <div class="hero-image">
-        <div class="image-overlay">
-          <h3>Premium Residences</h3>
-          <p>Curated for the discerning buyer</p>
-        </div>
-      </div>
-      <div class="floating-stat stat-1">
-        <span class="number">500+</span>
-        <span class="label">Sold Properties</span>
-      </div>
-      <div class="floating-stat stat-2">
-        <span class="number">₹500Cr</span>
-        <span class="label">Worth Transacted</span>
+    <div class="hero-image">
+      <div class="hero-main-img"></div>
+      <div class="hero-overlay-badge">
+        <span class="stat-num">₹500Cr+</span>
+        <span class="stat-text">Successfully Transacted</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Stats Bar -->
-<section class="stats-bar">
+<!-- Stats -->
+<section class="stats-section">
   <div class="stats-grid">
-    <div class="stat-item">
-      <span class="icon">🏆</span>
-      <span class="stat-number">10+</span>
-      <span class="stat-label">Years Experience</span>
+    <div class="stat-box">
+      <span class="number">10+</span>
+      <span class="label">Years Excellence</span>
     </div>
-    <div class="stat-item">
-      <span class="icon">🏘️</span>
-      <span class="stat-number">500+</span>
-      <span class="stat-label">Properties Sold</span>
+    <div class="stat-box">
+      <span class="number">500+</span>
+      <span class="label">Properties Delivered</span>
     </div>
-    <div class="stat-item">
-      <span class="icon">😊</span>
-      <span class="stat-number">98%</span>
-      <span class="stat-label">Client Satisfaction</span>
+    <div class="stat-box">
+      <span class="number">98%</span>
+      <span class="label">Client Retention</span>
     </div>
-    <div class="stat-item">
-      <span class="icon">⭐</span>
-      <span class="stat-number">4.9/5</span>
-      <span class="stat-label">Average Rating</span>
+    <div class="stat-box">
+      <span class="number">4.9</span>
+      <span class="label">Average Rating</span>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section class="about-section">
-  <div class="about-container">
-    <div class="about-image">
-      <div class="experience-badge">
-        <div class="years">10+</div>
-        <div class="text">Years of Excellence</div>
-      </div>
+  <div class="about-grid">
+    <div class="about-image-container">
+      <div class="about-main-image"></div>
     </div>
     <div class="about-content">
-      <div class="section-label">About Arjun Estates</div>
-      <h2>Redefining Luxury Real Estate in Mumbai</h2>
-      <p>With over a decade of experience in Mumbai's premium real estate market, we've built our reputation on trust, transparency, and unparalleled service excellence.</p>
-      <p>Every property in our portfolio is carefully curated to meet the highest standards of luxury and lifestyle. We don't just sell properties – we help you find your perfect home.</p>
-      
-      <div class="about-features">
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div class="feature-text">
-            <h4>Verified Premium Listings</h4>
-            <p>Every property thoroughly vetted with complete legal documentation</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div class="feature-text">
-            <h4>Personalized Service</h4>
-            <p>Dedicated consultation tailored to your unique requirements</p>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div class="feature-text">
-            <h4>Transparent Pricing</h4>
-            <p>No hidden charges, complete transparency in all transactions</p>
-          </div>
-        </div>
+      <div class="section-intro">Our Philosophy</div>
+      <h2>Building Trust Through Transparency</h2>
+      <p>For over a decade, we have maintained an unwavering commitment to excellence in Mumbai's luxury real estate sector. Our approach combines deep market insight with personalized service.</p>
+      <p>We represent a carefully curated selection of properties, ensuring each listing meets our exacting standards for quality, location, and value. This selective approach has earned us the trust of discerning clients and developers alike.</p>
+      <div class="about-signature">
+        <div class="name">Arjun Mehta</div>
+        <div class="title">Founder & Principal Consultant</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Properties Section -->
+<!-- Properties -->
 <section class="properties-section">
-  <div class="section-header">
-    <div class="section-label">Featured Collection</div>
-    <h2>Exclusive Properties</h2>
-    <p>Handpicked luxury residences in Mumbai's most prestigious neighborhoods</p>
+  <div class="section-intro-center">
+    <div class="label">Current Selection</div>
+    <h2>Featured Properties</h2>
+    <p>An exclusive collection representing the finest in contemporary Mumbai living</p>
   </div>
   
-  <div class="properties-grid">
+  <div class="properties-container">
     <!-- Property 1 -->
-    <div class="property-card">
-      <div class="property-image property-1">
-        <div class="property-badge">Featured</div>
+    <div class="property-item">
+      <div class="property-img">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=85" alt="Luxury Apartment Bandra">
+        <div class="property-tag">Featured</div>
       </div>
-      <div class="property-content">
-        <div class="property-location">📍 Bandra West</div>
-        <h3 class="property-title">Luxury Apartment</h3>
-        <div class="property-price">₹4.5 Cr</div>
-        <div class="property-features">
-          <div class="property-feature">🛏️ 3 Beds</div>
-          <div class="property-feature">🚿 3 Baths</div>
-          <div class="property-feature">📐 1,850 sq.ft</div>
+      <div class="property-details">
+        <div class="property-location">Bandra West</div>
+        <h3 class="property-name">Contemporary Residence</h3>
+        <div class="property-price">₹4.5 Crore</div>
+        <div class="property-specs">
+          <span class="spec">3 Bedrooms</span>
+          <span class="spec">3 Bathrooms</span>
+          <span class="spec">1,850 sq.ft</span>
         </div>
-        <a href="properties.html" class="property-cta">View Details</a>
+        <a href="properties.html" class="property-link">View Details</a>
       </div>
     </div>
 
     <!-- Property 2 -->
-    <div class="property-card">
-      <div class="property-image property-2">
-        <div class="property-badge">Premium</div>
+    <div class="property-item">
+      <div class="property-img">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=85" alt="Penthouse Worli">
+        <div class="property-tag">Premium</div>
       </div>
-      <div class="property-content">
-        <div class="property-location">📍 Worli</div>
-        <h3 class="property-title">Sea View Penthouse</h3>
-        <div class="property-price">₹12.8 Cr</div>
-        <div class="property-features">
-          <div class="property-feature">🛏️ 4 Beds</div>
-          <div class="property-feature">🚿 5 Baths</div>
-          <div class="property-feature">📐 3,200 sq.ft</div>
+      <div class="property-details">
+        <div class="property-location">Worli</div>
+        <h3 class="property-name">Waterfront Penthouse</h3>
+        <div class="property-price">₹12.8 Crore</div>
+        <div class="property-specs">
+          <span class="spec">4 Bedrooms</span>
+          <span class="spec">5 Bathrooms</span>
+          <span class="spec">3,200 sq.ft</span>
         </div>
-        <a href="properties.html" class="property-cta">View Details</a>
+        <a href="properties.html" class="property-link">View Details</a>
       </div>
     </div>
 
     <!-- Property 3 -->
-    <div class="property-card">
-      <div class="property-image property-3">
-        <div class="property-badge">Exclusive</div>
+    <div class="property-item">
+      <div class="property-img">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=85" alt="Villa Juhu">
+        <div class="property-tag">Exclusive</div>
       </div>
-      <div class="property-content">
-        <div class="property-location">📍 Juhu</div>
-        <h3 class="property-title">Luxury Villa</h3>
-        <div class="property-price">₹18.5 Cr</div>
-        <div class="property-features">
-          <div class="property-feature">🛏️ 4 Beds</div>
-          <div class="property-feature">🚿 4 Baths</div>
-          <div class="property-feature">📐 4,500 sq.ft</div>
+      <div class="property-details">
+        <div class="property-location">Juhu</div>
+        <h3 class="property-name">Private Villa Estate</h3>
+        <div class="property-price">₹18.5 Crore</div>
+        <div class="property-specs">
+          <span class="spec">4 Bedrooms</span>
+          <span class="spec">4 Bathrooms</span>
+          <span class="spec">4,500 sq.ft</span>
         </div>
-        <a href="properties.html" class="property-cta">View Details</a>
+        <a href="properties.html" class="property-link">View Details</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
+<!-- CTA -->
 <section class="cta-section">
   <div class="cta-content">
-    <h2>Ready to Find Your Dream Home?</h2>
-    <p>Let us guide you through Mumbai's most exclusive properties</p>
-    <a href="contact.html" class="btn-white">Schedule Consultation</a>
+    <h2>Begin Your Property Journey</h2>
+    <p>Schedule a private consultation to discuss your requirements</p>
+    <a href="contact.html" class="btn-white">Contact Us</a>
   </div>
 </section>
 
-<!-- WhatsApp Float -->
-<a href="https://wa.me/919004329806?text=Hi! I'm interested in learning more about your properties" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+<!-- WhatsApp -->
+<a href="https://wa.me/911234567890?text=Hello, I would like to inquire about your properties" class="whatsapp-btn" target="_blank" title="WhatsApp">
   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.369 1.313 5.022 2.010 7.865 2.010 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.022-0.728-7.188-2.104l-0.516-0.304-5.348 1.403 1.429-5.316-0.335-0.534c-1.518-2.412-2.318-5.204-2.318-8.145 0-7.364 5.636-13.333 12.609-13.333s12.609 5.969 12.609 13.333c0 7.364-5.636 13.333-12.609 13.333zM21.281 18.031c-0.403-0.201-2.380-1.174-2.748-1.308s-0.637-0.201-0.906 0.201c-0.268 0.403-1.041 1.308-1.276 1.577s-0.469 0.302-0.872 0.101c-0.403-0.201-1.701-0.627-3.240-2.000-1.198-1.068-2.007-2.388-2.241-2.791s-0.025-0.620 0.176-0.820c0.181-0.181 0.403-0.469 0.604-0.704s0.268-0.403 0.403-0.671c0.134-0.268 0.067-0.503-0.034-0.704s-0.906-2.183-1.241-2.989c-0.327-0.789-0.658-0.682-0.906-0.695-0.234-0.013-0.502-0.016-0.771-0.016s-0.704 0.100-1.073 0.503c-0.369 0.403-1.410 1.377-1.410 3.359s1.444 3.897 1.645 4.165c0.201 0.268 2.821 4.327 6.846 6.068 3.186 1.379 4.025 1.104 4.751 1.035 0.725-0.067 2.380-0.973 2.715-1.913s0.335-1.745 0.234-1.913c-0.100-0.167-0.369-0.268-0.771-0.469z"/>
   </svg>
@@ -1081,44 +809,21 @@
 
 <!-- Footer -->
 <footer>
-  <p>&copy; 2026 Arjun Estates. All Rights Reserved. | Mumbai, India</p>
+  <p>&copy; 2026 Arjun Estates. All Rights Reserved.</p>
 </footer>
 
 <script>
-  // Header scroll effect
   window.addEventListener('scroll', () => {
-    const header = document.getElementById('header');
-    if (window.scrollY > 100) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 80);
   });
 
-  // Mobile menu toggle
   function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
+    document.getElementById('navLinks').classList.toggle('active');
   }
 
-  // Close menu on link click
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById('navLinks').classList.remove('active');
-    });
-  });
-
-  // Smooth scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
     });
   });
 </script>
