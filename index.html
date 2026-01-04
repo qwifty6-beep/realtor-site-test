@@ -31,7 +31,6 @@
       overflow-x: hidden;
     }
 
-    /* Header */
     header {
       background: var(--white);
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -51,25 +50,9 @@
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
       font-weight: 700;
       font-size: 22px;
       color: var(--primary);
-    }
-
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 800;
-      font-size: 18px;
     }
 
     .nav-links {
@@ -103,7 +86,6 @@
       background: #ff7425;
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
       color: white;
@@ -317,7 +299,6 @@
       transform: translateY(-2px);
     }
 
-    /* About Section */
     .about {
       padding: 90px 5%;
       background: var(--white);
@@ -450,7 +431,6 @@
       margin: 0;
     }
 
-    /* Services Section */
     .services {
       padding: 90px 5%;
       background: var(--light);
@@ -528,7 +508,6 @@
       font-size: 16px;
     }
 
-    /* Properties Section */
     .properties {
       padding: 90px 5%;
       background: var(--white);
@@ -660,7 +639,6 @@
       background: var(--secondary);
     }
 
-    /* Testimonials */
     .testimonials {
       padding: 90px 5%;
       background: var(--light);
@@ -739,7 +717,6 @@
       margin-top: 15px;
     }
 
-    /* Contact CTA */
     .contact-cta {
       padding: 90px 5%;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -877,7 +854,6 @@
       transform: translateY(-2px);
     }
 
-    /* Footer */
     footer {
       background: #0f172a;
       color: white;
@@ -956,7 +932,6 @@
       font-size: 14px;
     }
 
-    /* WhatsApp Float */
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -985,7 +960,6 @@
       fill: white;
     }
 
-    /* Mobile Menu */
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -995,21 +969,17 @@
       cursor: pointer;
     }
 
-    /* Responsive */
     @media (max-width: 1024px) {
       .hero-content {
         grid-template-columns: 1fr;
         gap: 50px;
       }
-
       .about-content {
         grid-template-columns: 1fr;
       }
-
       .services-grid {
         grid-template-columns: 1fr;
       }
-
       .properties-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       }
@@ -1019,7 +989,6 @@
       .mobile-menu-btn {
         display: block;
       }
-
       .nav-links {
         position: fixed;
         top: 0;
@@ -1033,39 +1002,30 @@
         transition: right 0.3s;
         box-shadow: -5px 0 25px rgba(0,0,0,0.1);
       }
-
       .nav-links.active {
         right: 0;
       }
-
       .hero {
         padding: 80px 5% 60px;
       }
-
       .hero-stats {
         gap: 25px;
       }
-
       .about-features {
         grid-template-columns: 1fr;
       }
-
       .expertise-grid {
         grid-template-columns: 1fr;
       }
-
       .properties-grid {
         grid-template-columns: 1fr;
       }
-
       .form-group {
         grid-template-columns: 1fr;
       }
-
       .contact-methods {
         grid-template-columns: 1fr;
       }
-
       .footer-content {
         grid-template-columns: 1fr;
       }
@@ -1073,14 +1033,9 @@
   </style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <nav>
-      <div class="logo">
-        <div class="logo-icon">AE</div>
-        <span>Arjun Estates</span>
-      </div>
+      <div class="logo">Arjun Estates</div>
       <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -1093,14 +1048,12 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
       <div class="hero-text">
         <h1>Your Trusted Partner in <span class="highlight">Mumbai Real Estate</span></h1>
         <p class="hero-subtitle">Buying, Selling, or Investing? I've Got You Covered.</p>
         <p class="hero-description">With over 10 years of experience in Mumbai's property market, I help clients find their dream homes and make smart investment decisions. Personalized service, expert guidance, results you can count on.</p>
-        
         <div class="hero-stats">
           <div class="hero-stat">
             <span class="hero-stat-number">500+</span>
@@ -1115,21 +1068,17 @@
             <span class="hero-stat-label">Years Experience</span>
           </div>
         </div>
-
         <div class="hero-buttons">
           <a href="#properties" class="btn btn-primary">View Properties</a>
           <a href="#contact" class="btn btn-secondary">Schedule Meeting</a>
         </div>
       </div>
-
       <div class="hero-agent">
         <div class="agent-card">
           <div class="agent-image">
             <img src="https://github.com/qwifty6-beep/realtor-site-test/blob/main/assets/images/broker.png?raw=true" alt="Arjun Varma" style="object-position: center top;">
           </div>
-          <div class="agent-badge">
-            ⭐ Top Agent 2025
-          </div>
+          <div class="agent-badge">⭐ Top Agent 2025</div>
           <h2 class="agent-name">Arjun Varma</h2>
           <p class="agent-title">Licensed Real Estate Consultant</p>
           <div class="agent-contact-quick">
@@ -1141,7 +1090,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section class="about" id="about">
     <div class="about-container">
       <div class="section-header">
@@ -1149,13 +1097,10 @@
         <h2 class="section-title">Why Choose Arjun Varma?</h2>
         <p class="section-description">Combining local expertise with personalized service to help you achieve your real estate goals</p>
       </div>
-
       <div class="about-content">
         <div class="about-text">
           <p>Hi, I'm Arjun Varma, and I've been helping people buy, sell, and invest in Mumbai real estate for over a decade. What started as a passion for property has grown into a career I truly love.</p>
-          
           <p>I believe in honesty, transparency, and putting my clients first. Whether you're a first-time buyer, seasoned investor, or looking to sell, I'll guide you through every step with expert advice and genuine care.</p>
-
           <div class="about-features">
             <div class="about-feature-item">
               <div class="feature-icon-small">🏆</div>
@@ -1187,7 +1132,6 @@
             </div>
           </div>
         </div>
-
         <div class="expertise-grid">
           <div class="expertise-card">
             <div class="expertise-icon">🏘️</div>
@@ -1214,7 +1158,6 @@
     </div>
   </section>
 
-  <!-- Services Section -->
   <section class="services" id="services">
     <div class="services-container">
       <div class="section-header">
@@ -1222,7 +1165,6 @@
         <h2 class="section-title">Complete Real Estate Solutions</h2>
         <p class="section-description">From finding the perfect property to closing the deal, I handle it all</p>
       </div>
-
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">🏠</div>
@@ -1235,7 +1177,6 @@
             <li>Documentation assistance</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">💼</div>
           <h3>Property Selling</h3>
@@ -1247,7 +1188,6 @@
             <li>Quick closure process</li>
           </ul>
         </div>
-
         <div class="service-card">
           <div class="service-icon">📊</div>
           <h3>Investment Consulting</h3>
@@ -1263,7 +1203,6 @@
     </div>
   </section>
 
-  <!-- Properties Section -->
   <section class="properties" id="properties">
     <div class="properties-container">
       <div class="section-header">
@@ -1271,9 +1210,7 @@
         <h2 class="section-title">Properties I'm Currently Handling</h2>
         <p class="section-description">Exclusive listings and hot deals in Mumbai's prime locations</p>
       </div>
-
       <div class="properties-grid">
-        <!-- Property 1 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=85" alt="Bandra Property">
@@ -1290,8 +1227,6 @@
             <a href="#contact" class="property-cta">Schedule Viewing</a>
           </div>
         </div>
-
-        <!-- Property 2 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=85" alt="Worli Property">
@@ -1308,8 +1243,6 @@
             <a href="#contact" class="property-cta">Schedule Viewing</a>
           </div>
         </div>
-
-        <!-- Property 3 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=85" alt="Andheri Property">
@@ -1326,8 +1259,6 @@
             <a href="#contact" class="property-cta">Similar Properties</a>
           </div>
         </div>
-
-        <!-- Property 4 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=85" alt="Juhu Property">
@@ -1344,8 +1275,6 @@
             <a href="#contact" class="property-cta">Schedule Viewing</a>
           </div>
         </div>
-
-        <!-- Property 5 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=85" alt="BKC Property">
@@ -1362,8 +1291,6 @@
             <a href="#contact" class="property-cta">Schedule Viewing</a>
           </div>
         </div>
-
-        <!-- Property 6 -->
         <div class="property-card">
           <div class="property-image">
             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=85" alt="Powai Property">
@@ -1384,7 +1311,6 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="testimonials" id="testimonials">
     <div class="testimonials-container">
       <div class="section-header">
@@ -1392,7 +1318,6 @@
         <h2 class="section-title">What My Clients Say</h2>
         <p class="section-description">Real experiences from people I've helped with their property journey</p>
       </div>
-
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="quote-icon">"</div>
@@ -1406,7 +1331,6 @@
           </div>
           <div class="rating">⭐⭐⭐⭐⭐</div>
         </div>
-
         <div class="testimonial-card">
           <div class="quote-icon">"</div>
           <p class="testimonial-text">We sold our property in just 30 days thanks to Arjun's marketing skills and negotiation expertise. Got a great price too! Professional and trustworthy.</p>
@@ -1419,7 +1343,6 @@
           </div>
           <div class="rating">⭐⭐⭐⭐⭐</div>
         </div>
-
         <div class="testimonial-card">
           <div class="quote-icon">"</div>
           <p class="testimonial-text">As a first-time investor, Arjun's advice was invaluable. He helped me understand the market and find properties with excellent ROI potential. Very grateful!</p>
@@ -1436,12 +1359,10 @@
     </div>
   </section>
 
-  <!-- Contact CTA -->
   <section class="contact-cta" id="contact">
     <div class="contact-content">
       <h2>Let's Find Your Perfect Property</h2>
       <p>Whether you're buying, selling, or investing, I'm here to help. Get in touch today!</p>
-
       <div class="contact-methods">
         <div class="contact-method">
           <div class="contact-method-icon">📞</div>
@@ -1464,27 +1385,25 @@
           <p>Bandra West, Mumbai</p>
         </div>
       </div>
-
       <div class="contact-form-wrapper">
-        <form class="contact-form">
+        <div class="contact-form">
           <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
           </div>
           <div class="form-group">
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="interest" placeholder="Property Interest">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="interest" placeholder="Property Interest">
           </div>
           <div class="form-group full">
-            <textarea name="message" placeholder="Tell me about your requirements..." required></textarea>
+            <textarea id="message" placeholder="Tell me about your requirements..." required></textarea>
           </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+          <button onclick="handleSubmit()" class="submit-btn">Send Message</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -1497,7 +1416,6 @@
           <a href="#" class="social-link">🐦</a>
         </div>
       </div>
-
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul class="footer-links">
@@ -1508,7 +1426,6 @@
           <li><a href="#testimonials">Testimonials</a></li>
         </ul>
       </div>
-
       <div class="footer-section">
         <h3>Services</h3>
         <ul class="footer-links">
@@ -1519,7 +1436,6 @@
           <li><a href="#services">Legal Support</a></li>
         </ul>
       </div>
-
       <div class="footer-section">
         <h3>Contact Info</h3>
         <ul class="footer-links">
@@ -1530,13 +1446,11 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p>&copy; 2026 Arjun Varma - Arjun Estates. All rights reserved. | Licensed Real Estate Agent RERA No: ABC123456</p>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
   <a href="https://wa.me/919004329806?text=Hi Arjun, I'm interested in discussing a property" class="whatsapp-float" target="_blank">
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.135-2.135c2.369 1.313 5.022 2.010 7.865 2.010 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.547 0-5.022-0.728-7.188-2.104l-0.516-0.304-5.348 1.403 1.429-5.316-0.335-0.534c-1.518-2.412-2.318-5.204-2.318-8.145 0-7.364 5.636-13.333 12.609-13.333s12.609 5.969 12.609 13.333c0 7.364-5.636 13.333-12.609 13.333zM21.281 18.031c-0.403-0.201-2.380-1.174-2.748-1.308s-0.637-0.201-0.906 0.201c-0.268 0.403-1.041 1.308-1.276 1.577s-0.469 0.302-0.872 0.101c-0.403-0.201-1.701-0.627-3.240-2.000-1.198-1.068-2.007-2.388-2.241-2.791s-0.025-0.620 0.176-0.820c0.181-0.181 0.403-0.469 0.604-0.704s0.268-0.403 0.403-0.671c0.134-0.268 0.067-0.503-0.034-0.704s-0.906-2.183-1.241-2.989c-0.327-0.789-0.658-0.682-0.906-0.695-0.234-0.013-0.502-0.016-0.771-0.016s-0.704 0.100-1.073 0.503c-0.369 0.403-1.410 1.377-1.410 3.359s1.444 3.897 1.645 4.165c0.201 0.268 2.821 4.327 6.846 6.068 3.186 1.379 4.025 1.104 4.751 1.035 0.725-0.067 2.380-0.973 2.715-1.913s0.335-1.745 0.234-1.913c-0.100-0.167-0.369-0.268-0.771-0.469z"/>
@@ -1544,73 +1458,42 @@
   </a>
 
   <script>
-    // Mobile menu toggle
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('active');
     }
-
-    // Close menu when clicking on a link
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('active');
       });
     });
-
-    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({behavior: 'smooth', block: 'start'});
         }
       });
     });
-
-    // Form submission with multiple options
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const name = document.querySelector('input[placeholder="Your Name"]').value;
-      const phone = document.querySelector('input[placeholder="Phone Number"]').value;
-      const email = document.querySelector('input[placeholder="Email Address"]').value;
-      const interest = document.querySelector('input[placeholder="Property Interest"]').value;
-      const message = document.querySelector('textarea').value;
-      
-      // OPTION 1: Send to WhatsApp (Most practical for brokers)
+    function handleSubmit() {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const interest = document.getElementById('interest').value;
+      const message = document.getElementById('message').value;
+      if (!name || !phone || !email || !message) {
+        alert('Please fill in all required fields');
+        return;
+      }
       const whatsappMessage = `*New Property Inquiry*%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Interest:* ${interest}%0A*Message:* ${encodeURIComponent(message)}`;
       window.open(`https://wa.me/919004329806?text=${whatsappMessage}`, '_blank');
-      
-      // OPTION 2: For email submission (requires backend or service like Formspree)
-      // Uncomment and add your formspree endpoint or email service
-      /*
-      fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          alert('Thank you! I will get back to you within 24 hours.');
-          this.reset();
-        }
-      });
-      */
-      
-      // OPTION 3: Google Sheets integration (requires Google Apps Script)
-      // Or use services like SheetDB, Google Forms embed, etc.
-      
-      // Show confirmation
       alert('Thank you for your inquiry! Opening WhatsApp to send your details...');
-      this.reset();
-    });
+      document.getElementById('name').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('interest').value = '';
+      document.getElementById('message').value = '';
+    }
   </script>
-
 </body>
 </html>
